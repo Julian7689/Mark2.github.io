@@ -81,71 +81,69 @@
     </div>
 
     <script>
-        document.getElementById('registroForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+  document.getElementById('registroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-            let isValid = true;
+    let isValid = true;
 
-     
-            const nombre = document.getElementById('nombre').value;
-            if (nombre.trim().length < 2) {
-                document.getElementById('nombreError').innerText = 'El nombre debe tener al menos 2 caracteres';
-                isValid = false;
-            } else {
-                document.getElementById('nombreError').innerText = '';
-            }
+    const nombre = document.getElementById('nombre').value;
+    if (nombre.trim().length < 2) {
+        document.getElementById('nombreError').innerText = 'El nombre debe tener al menos 2 caracteres';
+        isValid = false;
+    } else {
+        document.getElementById('nombreError').innerText = '';
+    }
 
-     
-            const apellido = document.getElementById('apellido').value;
-            if (apellido.trim().length < 2) {
-                document.getElementById('apellidoError').innerText = 'El apellido debe tener al menos 2 caracteres';
-                isValid = false;
-            } else {
-                document.getElementById('apellidoError').innerText = '';
-            }
+    const apellido = document.getElementById('apellido').value;
+    if (apellido.trim().length < 2) {
+        document.getElementById('apellidoError').innerText = 'El apellido debe tener al menos 2 caracteres';
+        isValid = false;
+    } else {
+        document.getElementById('apellidoError').innerText = '';
+    }
 
-            const email = document.getElementById('email').value;
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                document.getElementById('emailError').innerText = 'Por favor ingresa un correo válido';
-                isValid = false;
-            } else {
-                document.getElementById('emailError').innerText = '';
-            }
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById('emailError').innerText = 'Por favor ingresa un correo válido';
+        isValid = false;
+    } else {
+        document.getElementById('emailError').innerText = '';
+    }
 
-      
-            const password = document.getElementById('password').value;
-            if (password.length < 8 || !/[!@#$%^&*]/.test(password)) {
-                document.getElementById('passwordError').innerText = 'La contraseña debe tener al menos 8 caracteres y un símbolo';
-                isValid = false;
-            } else {
-                document.getElementById('passwordError').innerText = '';
-            }
+    const password = document.getElementById('password').value;
+    if (password.length < 8 || !/[!@#$%^&*]/.test(password)) {
+        document.getElementById('passwordError').innerText = 'La contraseña debe tener al menos 8 caracteres y un símbolo';
+        isValid = false;
+    } else {
+        document.getElementById('passwordError').innerText = '';
+    }
 
-          
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            if (password !== confirmPassword) {
-                document.getElementById('confirmPasswordError').innerText = 'Las contraseñas no coinciden';
-                isValid = false;
-            } else {
-                document.getElementById('confirmPasswordError').innerText = '';
-            }
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').innerText = 'Las contraseñas no coinciden';
+        isValid = false;
+    } else {
+        document.getElementById('confirmPasswordError').innerText = '';
+    }
 
-            const fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
-            const hoy = new Date();
-            const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-            if (edad < 18 || isNaN(fechaNacimiento)) {
-                document.getElementById('fechaNacimientoError').innerText = 'Debes ser mayor de 18 años';
-                isValid = false;
-            } else {
-                document.getElementById('fechaNacimientoError').innerText = '';
-            }
+    const fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
+    const hoy = new Date();
+    const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    if (edad < 18 || isNaN(fechaNacimiento)) {
+        document.getElementById('fechaNacimientoError').innerText = 'Debes ser mayor de 18 años';
+        isValid = false;
+    } else {
+        document.getElementById('fechaNacimientoError').innerText = '';
+    }
 
-            if (isValid) {
-                alert('Registro exitoso');
-                this.submit();
-            }
-        });
+    if (isValid) {
+        alert('Registro exitoso');
+        
+        // Redirigir al dashboard
+        window.location.href = 'dashboard.html'; 
+    }
+});
     </script> 
 </body>
 </html>
