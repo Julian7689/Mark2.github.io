@@ -7,7 +7,7 @@
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(/imagenes/low-poly-grid-haikei.png);
+    background-image: url(low-poly-grid-haikei.png);
     display: flex;
     background-size: cover;
     justify-content: center;
