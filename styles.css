@@ -12,10 +12,10 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    background-image: url(/imagenes/wickedbackground.png);
+    background-image: url(/wickedbackground.png);
 }
 .header-container{
-    background-image: url(/imagenes/pexels-cottonbro-4065145.jpg);
+    background-image: url(/pexels-cottonbro-4065145.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -207,7 +207,7 @@ p.parrafote {
 
   .general2 {
     padding: 20px;
-    background-image: url(/imagenes/pexels-fauxels-3183183.jpg);
+    background-image: url(/pexels-fauxels-3183183.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -416,18 +416,18 @@ p.parrafote {
     margin-top: -25px;
 }
 .container-1 {
-    background-image: url('/imagenes/r1.png');
+    background-image: url('/r1.png');
 }
 .container-2 {
-    background-image: url('/imagenes/r2.png');
+    background-image: url('/r2.png');
 }
 
 .container-3 {
-    background-image: url('/imagenes/r3.png');
+    background-image: url('/r3.png');
 }
 .general2 {
     padding: 40px 0;
-    background-image: url(/imagenes/pexels-fauxels-3183183.jpg);
+    background-image: url(/pexels-fauxels-3183183.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
